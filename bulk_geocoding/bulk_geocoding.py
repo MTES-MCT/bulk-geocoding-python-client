@@ -21,7 +21,10 @@ def geocode(data, columns, citycode=None, postcode=None):
                            columns,
                            citycode=citycode,
                            postcode=postcode)
-    return csv2dicts(StringIO(response.text), dialect='unix')
+
+    return csv2dicts(
+        StringIO(response.text),
+        dialect='unix')
 
 
 def geocode_csv(csvlike, columns, citycode=None, postcode=None):
@@ -37,10 +40,7 @@ def geocode_csv(csvlike, columns, citycode=None, postcode=None):
 
     response = requests.post(addok_bano_search_csv, data=payload, files=files)
 
-    if response.status_code != 200:
-        csvlike.seek(0)
-        return csvlike.read()
-
     response.raise_for_status()
 
     return response
+

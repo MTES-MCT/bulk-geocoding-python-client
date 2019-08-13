@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="bulk_geocoding",
-    version="0.1.0",
+    version="0.1.1",
     description="Python client for geocoding adresses in bulk using adresse.data.gouv.fr API",
     author="Benoît Guigal",
     author_email="benoit.guigal@protonmail.com",
