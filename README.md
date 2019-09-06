@@ -6,6 +6,12 @@ See [https://adresse.data.gouv.fr/api/](https://adresse.data.gouv.fr/api)
 
 This client uses the endpoint `/search/csv`
 
+## Installation
+
+```
+pip install bulk-geocoding
+```
+
 ## Usage
 
 ```python
